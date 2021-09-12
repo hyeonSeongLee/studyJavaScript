@@ -16,17 +16,17 @@
         </h1>
         <ol>
             <li>
-                <a href="a"> 
+                <a href="a" class="aqua"> 
                     HTML
                 </a>
             </li>
             <li>
-                <a href="b">
+                <a href="b" class="aqua">
                     CSS
                 </a>
             </li>
             <li>
-                <a href="c">
+                <a href="c" class="aqua">
                     JavaScript
                 </a>
             </li>
@@ -40,10 +40,13 @@
         <input type="button" value="night" onclick="
         document.querySelector('body').style.backgroundColor='black'
         document.querySelector('body').style.color='aquamarine'
+        document.querySelector('a').style.color='aquamarine'
+        document.querySelectorAll('#aqua').style.color='aquamarine'
         ">
         <input type="button" value="day" onclick="
         document.querySelector('body').style.backgroundColor='white'
         document.querySelector('body').style.color='teal'
+        document.querySelector('a').style.color='teal'
         ">
     </body>
 </html>
