@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    a {color: teal;}
+    body {color: teal; font-family: 'Playfair Display', serif;}
+
+</style>
+<body>
+    <h1>
+        <a href="index.com">WEB</a>
+    </h1>
+    <ol>
+        <li>
+            <a href="HTML.com">HTML</a>
+        </li>
+        <li>
+            <a href="CSS.com">CSS</a>
+        </li>
+        <li>
+            <a href="JavaScript.com">JavaScript</a>
+        </li>
+    </ol>
+    <p>
+        JavaScript (/ˈdʒɑːvəˌskrɪpt/),[9] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[10] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+    </p>
+    <input type="button" value="night" id="night_day" onclick="
+    var target = document.querySelector('body')
+    var alist = document.querySelectorAll('a')
+    var i = 0
+    if (this.value == 'night') {
+        target.style.backgroundColor='black'
+        target.style.color='aquamarine'
+        document.querySelector('#night_day').value='day'
+        
+        while(i<4) {
+            alist[i].style.color='aquamarine'
+            i=i+1
+        }
+    }
+    else {
+        target.style.backgroundColor='white'
+        target.style.color='teal'
+        document.querySelector('#night_day').value='night'
+
+        while(i<alist.length) {
+            alist[i].style.color='teal'
+            i=i+1
+        }
+    }
+    "> 
+</body>
+</html>

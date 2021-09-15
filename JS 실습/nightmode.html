@@ -49,17 +49,28 @@
             {
                 target.style.backgroundColor='black'
                 target.style.color='aquamarine'
-                document.querySelector('a').style.color='aquamarine'
-                document.querySelector('#night-day').value= 'day'   
+                document.querySelector('#night-day').value= 'day'
+                
+                var alist = document.querySelectorAll('a')
+                var i = 0
+                while (i<alist.length) {
+                alist[i].style.color='aquamarine'
+                i=i+1 }  
             }
             else
             {
                 target.style.backgroundColor='white'
                 target.style.color='teal'
-                document.querySelector('a').style.color='teal'
                 document.querySelector('#night-day').value= 'night'
+
+                var alist = document.querySelectorAll('a')
+                var i = 0
+                while (i<alist.length) {
+                alist[i].style.color='teal'
+                i=i+1 }  
             }
         ">
+
 
     </body>
 </html>
