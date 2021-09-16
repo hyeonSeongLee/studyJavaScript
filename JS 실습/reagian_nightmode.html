@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {color: midnightblue;}
+        a {color: midnightblue;}
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="a">
+            Web
+        </a>
+    </h1>
+    <ol>
+        <li>
+            <a href="b">
+                HTML
+            </a>
+        </li>
+        <li>
+            <a href="c">
+                CSS
+            </a>
+        </li>
+        <li>
+            <a href="d">
+                JavaScript
+            </a>
+        </li>
+    </ol>
+    <input type="button" value="night" id="night-day" onclick="
+        var target = document.querySelector('body')
+        var alist = document.querySelectorAll('a')
+        var i = 0
+        if( this.value==='night') {
+        target.style.backgroundColor='black'
+        target.style.color='powderblue'
+        this.value='day'
+            while (i<alist.length) {
+                alist[i].style.color='powderblue'
+                i=i+1
+            }
+        }
+        else {
+            target.style.backgroundColor='white'
+            target.style.color='midnightblue'
+            this.value='night'
+            while (i<alist.length) {
+                alist[i].style.color='midnightblue'
+                i=i+1
+            }
+        }
+        ">
+    <p>
+        JavaScript (/ˈdʒɑːvəˌskrɪpt/),[9] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[10] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+    </p>
+</body>
+</html>
