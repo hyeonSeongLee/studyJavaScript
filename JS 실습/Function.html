@@ -37,9 +37,20 @@
             document.write(left+right+'<br>')
         }
         sum(2,3)
+
+        function colorRedSum (left,right) {
+            document.write('<div style="color:red">'+ left + right +'</div>')
+        }
+        colorRedSum(3,4)
     </script>
     <h2>
         Return
     </h2>
+    <script>
+        function returnSum (left,right){
+            return left+right
+        }
+            document.write('<div style="color:red">'+returnSum(2,3)+'</div>')
+    </script>
 </body>
 </html>
