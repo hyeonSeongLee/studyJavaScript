@@ -13,31 +13,38 @@
             }
         </style>
         <script>
+            function linkSetColor (inputColor) {
+                var alist = document.querySelectorAll('a')
+                var i = 0
+                while (i<alist.length) {
+                alist[i].style.color=inputColor
+                i=i+1 }  
+            }
+            function bodySetColor (inputColor) {
+                var target = document.querySelector('body')
+                target.style.color=inputColor
+            }
+            function bodySetBackgroundColor (inputColor) {
+                var target = document.querySelector('body')
+                target.style.backgroundColor=inputColor
+            }
             function nightDayHandler (self) {
             var target = document.querySelector('body')
             if(self.value === 'night')
             {
-                target.style.backgroundColor='black'
-                target.style.color='aquamarine'
+                bodySetBackgroundColor('black')
+                bodySetColor('aquamarine')
                 document.querySelector('#night-day').value= 'day'
                 
-                var alist = document.querySelectorAll('a')
-                var i = 0
-                while (i<alist.length) {
-                alist[i].style.color='aquamarine'
-                i=i+1 }  
+                linkSetColor('aquamarine')
             }
             else
             {
-                target.style.backgroundColor='white'
-                target.style.color='teal'
+                bodySetBackgroundColor('white')
+                bodySetColor ('teal')
                 document.querySelector('#night-day').value= 'night'
 
-                var alist = document.querySelectorAll('a')
-                var i = 0
-                while (i<alist.length) {
-                alist[i].style.color='teal'
-                i=i+1 }  
+                linkSetColor('teal')
             }
         }
         </script>
