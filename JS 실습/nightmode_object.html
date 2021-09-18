@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Nightmode
+        </title>
+        <style>
+            body {
+                color: teal;
+            }
+            a {
+                color: teal;
+            }
+        </style>
+        <script>
+            var body = {
+                setColor:function (inputColor) {
+                var target = document.querySelector('body')
+                target.style.color=inputColor
+                },
+                setBackgroundColor:function (inputColor) {
+                var target = document.querySelector('body')
+                target.style.backgroundColor=inputColor
+                }
+
+            }
+            var link = {
+                setColor: function (inputColor) {
+                var alist = document.querySelectorAll('a')
+                var i = 0
+                while (i<alist.length) {
+                alist[i].style.color=inputColor
+                i=i+1 }  
+                }
+            }
+            function nightDayHandler (self) {
+            var target = document.querySelector('body')
+            if(self.value === 'night')
+            {
+                body.setBackgroundColor('black')
+                body.setColor('aquamarine')
+                document.querySelector('#night-day').value= 'day'
+                
+                link.setColor('aquamarine')
+            }
+            else
+            {
+                body.setBackgroundColor('white')
+                body.setColor ('teal')
+                document.querySelector('#night-day').value= 'night'
+
+                link.setColor('teal')
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h1>
+            <a href="index.html">
+                WEB
+            </a>
+        </h1>
+        <ol>
+            <li>
+                <a href="a" id="a"> 
+                    HTML
+                </a>
+            </li>
+            <li>
+                <a href="b" id="b">
+                    CSS
+                </a>
+            </li>
+            <li>
+                <a href="c" id="c">
+                    JavaScript
+                </a>
+            </li>
+        </ol>
+        <h2>
+            JavaScript
+        </h2>
+        <p>
+            JavaScript (/ˈdʒɑːvəˌskrɪpt/),[9] often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.[10] JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+        </p>
+        <!--토글 버튼-->
+        <input id="night-day" type="button" value="night" onclick="
+        nightDayHandler(this)
+        ">
+
+
+    </body>
+</html>
