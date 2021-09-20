@@ -1,78 +1,32 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="/nightmode.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <title>
             Nightmode
         </title>
-        <style>
-            body {
-                color: teal;
-            }
-            a {
-                color: teal;
-            }
-        </style>
-        <script>
-            var body = {
-                setColor:function (inputColor) {
-                var target = document.querySelector('body')
-                target.style.color=inputColor
-                },
-                setBackgroundColor:function (inputColor) {
-                var target = document.querySelector('body')
-                target.style.backgroundColor=inputColor
-                }
-
-            }
-            var link = {
-                setColor: function (inputColor) {
-                var alist = document.querySelectorAll('a')
-                var i = 0
-                while (i<alist.length) {
-                alist[i].style.color=inputColor
-                i=i+1 }  
-                }
-            }
-            function nightDayHandler (self) {
-            var target = document.querySelector('body')
-            if(self.value === 'night')
-            {
-                body.setBackgroundColor('black')
-                body.setColor('aquamarine')
-                document.querySelector('#night-day').value= 'day'
-                
-                link.setColor('aquamarine')
-            }
-            else
-            {
-                body.setBackgroundColor('white')
-                body.setColor ('teal')
-                document.querySelector('#night-day').value= 'night'
-
-                link.setColor('teal')
-            }
-        }
-        </script>
+        <script src="nightmode.js"></script>
     </head>
     <body>
         <h1>
-            <a href="index.html">
+            <a href="nightmode_web.html">
                 WEB
             </a>
         </h1>
         <ol>
             <li>
-                <a href="a" id="a"> 
+                <a href="nightmode_html.html" id="a"> 
                     HTML
                 </a>
             </li>
             <li>
-                <a href="b" id="b">
+                <a href="nightmode_css.html" id="b">
                     CSS
                 </a>
             </li>
             <li>
-                <a href="c" id="c">
+                <a href="nightmode_object.html" id="c">
                     JavaScript
                 </a>
             </li>
