@@ -1,21 +1,24 @@
 var body = {
     setColor:function (inputColor) {
-    var target = document.querySelector('body')
-    target.style.color=inputColor
+    // var target = document.querySelector('body')
+    // target.style.color=inputColor
+    $('body').css("color",inputColor)
     },
     setBackgroundColor:function (inputColor) {
-    var target = document.querySelector('body')
-    target.style.backgroundColor=inputColor
+    // var target = document.querySelector('body')
+    // target.style.backgroundColor=inputColor
+    $('body').css("backgroundColor",inputColor)
     }
 
 }
 var link = {
     setColor: function (inputColor) {
-    var alist = document.querySelectorAll('a')
-    var i = 0
-    while (i<alist.length) {
-    alist[i].style.color=inputColor
-    i=i+1 }
+    // var alist = document.querySelectorAll('a')
+    // var i = 0
+    // while (i<alist.length) {
+    // alist[i].style.color=inputColor
+    // i=i+1 }
+    $('a').css("color", inputColor)
     }
 }
 function nightDayHandler (self) {
