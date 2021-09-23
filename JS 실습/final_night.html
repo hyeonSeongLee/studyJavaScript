@@ -39,8 +39,18 @@
     </p>
 
     <input type="button" value="NIGHT" onclick="
-    body.backgroundcolor('powderblue')
+    if (this.value === 'NIGHT') {
+    bodyBackgroundColor('black')
+    bodyColor('powderblue')
+    linkColor('powderblue')
+    this.value='DAY'
+    }
+    else {
+    bodyBackgroundColor('white')
+    bodyColor('navy')
+    linkColor('navy')
+    this.value ='NIGHT'
+    }
     ">
-
 </body>
 </html>
