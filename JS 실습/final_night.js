@@ -17,7 +17,7 @@ function setLinkColor(color){
     }
 }
 
-body.handler = function(self){
+var Body = { handler:function(self){
     if (self.value === 'NIGHT') {
         bodyBackgroundColor('black')
         bodyColor('powderblue')
@@ -30,6 +30,7 @@ body.handler = function(self){
         setLinkColor('navy')
         self.value ='NIGHT'
         }
+}
 }
 
 
