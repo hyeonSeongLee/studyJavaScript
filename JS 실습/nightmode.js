@@ -19,13 +19,11 @@ var link = {
     }
 }
 function nightDayHandler (self) {
-var target = document.querySelector('body')
 if(self.value === 'night')
 {
     body.setBackgroundColor('black')
     body.setColor('aquamarine')
     document.querySelector('#night-day').value= 'day'
-    
     link.setColor('aquamarine')
 }
 else
@@ -33,7 +31,6 @@ else
     body.setBackgroundColor('white')
     body.setColor ('teal')
     document.querySelector('#night-day').value= 'night'
-
     link.setColor('teal')
 }
 }

@@ -8,7 +8,7 @@ function bodyColor(color){
     target.style.color=color
 }
 
-function linkColor(color){
+function setLinkColor(color){
     var link = document.querySelectorAll('a')
     var i = 0
     while (i<link.length) {
@@ -16,3 +16,53 @@ function linkColor(color){
         i = i+1
     }
 }
+
+body.handler = function(self){
+    if (self.value === 'NIGHT') {
+        bodyBackgroundColor('black')
+        bodyColor('powderblue')
+        setLinkColor('powderblue')
+        self.value='DAY'
+        }
+        else {
+        bodyBackgroundColor('white')
+        bodyColor('navy')
+        setLinkColor('navy')
+        self.value ='NIGHT'
+        }
+}
+
+
+// var body = {
+//     handler: function(self){
+//         if (self.value === 'NIGHT') {
+//             bodyBackgroundColor('black')
+//             bodyColor('powderblue')
+//             setLinkColor('powderblue')
+//             self.value='DAY'
+//             }
+//             else {
+//             bodyBackgroundColor('white')
+//             bodyColor('navy')
+//             setLinkColor('navy')
+//             self.value ='NIGHT'
+//             }
+//     }
+// }
+
+
+// const button = document.querySelector("button");
+// button.addEventListener("click", function() {
+//   if (this.value === 'NIGHT') {
+//     bodyBackgroundColor('black')
+//     bodyColor('powderblue')
+//     linkColor('powderblue')
+//     this.value = 'DAY'
+//   } else {
+//     bodyBackgroundColor('white')
+//     bodyColor('navy')
+//     linkColor('navy')
+//     this.value = 'NIGHT'
+//   }
+
+// })
